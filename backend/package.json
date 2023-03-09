@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Api para guardar imagenes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloSan1997/PracticaTypescript.git"
+  },
+  "keywords": [
+    "apiRest",
+    "imagenes"
+  ],
+  "author": "Pablo Santillana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloSan1997/PracticaTypescript/issues"
+  },
+  "homepage": "https://github.com/PabloSan1997/PracticaTypescript#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@hapi/boom": "^10.0.1",
+    "cors": "^2.8.5",
+    "joi": "^17.8.3"
+  }
+}
