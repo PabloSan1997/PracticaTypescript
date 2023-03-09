@@ -26,9 +26,34 @@ imagenes.get("/:id", async(req, res, next)=>{
 imagenes.post('/', async(req, res,next)=>{
     try {
         const nose = await servicios.agregar(req.body);
+        res.status(201).json(nose);
+    } catch (error) {
+        next(error);
+    }
+});
+imagenes.patch('/:id', async(req, res,next)=>{
+    try {
+        const nose = await servicios.editar(req.params.id, req.body);
         res.json(nose);
     } catch (error) {
         next(error);
     }
 });
+imagenes.delete('/borrarTodo', async(req, res, next)=>{
+    try {
+        const mandaralv = await servicios.borrarTodo();
+        res.json(mandaralv);
+    } catch (error) {
+        next(error);
+    }
+});
+imagenes.delete('/:id', async(req, res,next)=>{
+    try {
+        const nose = await servicios.borrarUno(req.params.id);
+        res.json(nose);
+    } catch (error) {
+        next(error);
+    }
+});
+
 module.exports={imagenes}

@@ -1,16 +1,1 @@
-{
-    "listImagenes": [
-        {
-            "id": 1,
-            "url": "https://fastly.picsum.photos/id/76/800/800.jpg?hmac=DWwdcBhZyauyesNCeKO30UrTDWwg8HDvFli7H2ZrcfA",
-            "titulo": "Titulo 1",
-            "descripcion": "Esta imagen es lo mejor del mundo"
-        },
-        {
-            "id": 2,
-            "url": "https://fastly.picsum.photos/id/76/800/800.jpg?hmac=DWwdcBhZyauyesNCeKO30UrTDWwg8HDvFli7H2ZrcfA",
-            "titulo": "Titulo 2",
-            "descripcion": "Esta imagen es lo mejor del mundo"
-        }
-    ]
-}
+{"listImagenes":[{"id":1,"url":"https://fastly.picsum.photos/id/76/800/800.jpg?hmac=DWwdcBhZyauyesNCeKO30UrTDWwg8HDvFli7H2ZrcfA","titulo":"Titulo 3","descripcion":"Esta imagen es lo mejor del mundo"},{"id":2,"url":"https://fastly.picsum.photos/id/76/800/800.jpg?hmac=DWwdcBhZyauyesNCeKO30UrTDWwg8HDvFli7H2ZrcfA","titulo":"Titulo 3","descripcion":"Esta imagen es lo mejor del mundo"},{"id":3,"url":"https://fastly.picsum.photos/id/76/800/800.jpg?hmac=DWwdcBhZyauyesNCeKO30UrTDWwg8HDvFli7H2ZrcfA","titulo":"Titulo 3","descripcion":"Esta imagen es lo mejor del mundo"}]}
