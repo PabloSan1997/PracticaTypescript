@@ -41,7 +41,7 @@ imagenes.patch('/:id', async(req, res,next)=>{
 });
 imagenes.delete('/borrarTodo', async(req, res, next)=>{
     try {
-        const mandaralv = await servicios.borrarTodo();
+        const mandaralv = await servicios.borrarTodo(req.body);
         res.json(mandaralv);
     } catch (error) {
         next(error);
@@ -49,7 +49,7 @@ imagenes.delete('/borrarTodo', async(req, res, next)=>{
 });
 imagenes.delete('/:id', async(req, res,next)=>{
     try {
-        const nose = await servicios.borrarUno(req.params.id);
+        const nose = await servicios.borrarUno(req.params.id, req.body);
         res.json(nose);
     } catch (error) {
         next(error);
