@@ -40,6 +40,7 @@ imagenes.patch('/:id', async(req, res,next)=>{
     }
 });
 imagenes.delete('/borrarTodo', async(req, res, next)=>{
+    console.log(req.body);
     try {
         const mandaralv = await servicios.borrarTodo(req.body);
         res.json(mandaralv);

@@ -1,5 +1,6 @@
 import React from 'react'
-import { useMicontexto } from '../contexto/contexto';
+import { Contexto } from '../contexto/contexto';
+
 
 type object2={
   url:string,
@@ -16,7 +17,7 @@ type imagen = {
   hola:imagen
 }
 export function Contenedor():JSX.Element {
-  const {hola}=useMicontexto() as miContexto;
+  const {hola}=React.useContext(Contexto) as miContexto;
   return (
     <div className="contenedor">
         {hola.map((elemento)=>

@@ -5,8 +5,11 @@ import { Provedor } from './contexto/contexto'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Provedor>
+  <React.StrictMode>
+    <Provedor>
     <App />
-  </Provedor>
+    </Provedor>
+  </React.StrictMode>
+   
     
 )

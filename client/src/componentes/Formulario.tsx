@@ -1,6 +1,10 @@
 import React from 'react';
 import { mandar } from '../Api/MandarApi';
-
+import { Contexto } from '../contexto/contexto';
+type hola = {
+    setImagenes:Function,
+    setBorrar:Function
+}
 
 interface props{
     setMostrar:Function
@@ -23,9 +27,16 @@ export function Formulario({setMostrar}:props): JSX.Element {
             url:""
         }
     );
+    const {setImagenes, setBorrar}=React.useContext(Contexto) as hola;
     const subir=(e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        mandar(datos);
+        mandar(datos, setImagenes);
+        setDatos( {
+            titulo:"",
+            descripcion:"",
+            url:""
+        });
+        setMostrar(false);
     }
     const titulo=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setDatos({...datos, titulo:e.target.value})
@@ -53,7 +64,8 @@ export function Formulario({setMostrar}:props): JSX.Element {
             </div>
             <div className="areabotones">
                 <button type='submit' className='boton'>Enviar</button>
-                <button className='boton' onClick={()=>setMostrar(false)}>Cancelar</button>
+                <button className='boton'type="button" onClick={()=>setMostrar(false)}>Cancelar</button>
+                <button className='boton' type="button" onClick={()=>{setBorrar(true);setMostrar(false);}}>Borrar Todo</button>
             </div>
         </form>
     );

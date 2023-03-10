@@ -6,7 +6,8 @@ interface props {
     children: JSX.Element | JSX.Element[]
 }
 type miApi = {
-    imagenes: buscar[]
+    imagenes: buscar[],
+    setImagenes:Function
 }
 interface buscar  {
     id: number,
@@ -14,17 +15,19 @@ interface buscar  {
     titulo: string,
     descripcion: string
 }
-const Contexto = React.createContext({});
-export function Provedor({ children }: props): JSX.Element {
-    const { imagenes } = useImagenes() as miApi;
+export const Contexto = React.createContext({});
+export function Provedor({ children }: props) {
+    const { imagenes, setImagenes } = useImagenes() as miApi;
     const [buscar, setBuscar] = React.useState<string>("");
+    const [borrar,setBorrar]=React.useState<boolean>(false);
     let hola: object[] = [];
     if (buscar === '') {
         hola = imagenes;
     } else {
         const copia = imagenes;
+        const b = buscar;
         hola = copia.filter((elemento)=> {
-            let letras = buscar.toLocaleUpperCase();
+            let letras = b.toLocaleUpperCase();
             let titulo = elemento.titulo.toLocaleUpperCase();
             return titulo.includes(letras);
         }
@@ -37,7 +40,10 @@ export function Provedor({ children }: props): JSX.Element {
                     hola,
                     imagenes,
                     buscar,
-                    setBuscar
+                    setBuscar,
+                    setImagenes,
+                    borrar,
+                    setBorrar
                 }
             }
         >
@@ -47,7 +53,3 @@ export function Provedor({ children }: props): JSX.Element {
 }
 
 
-export const useMicontexto = (): object => {
-    const auth: object = React.useContext(Contexto);
-    return auth;
-}
