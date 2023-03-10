@@ -3,11 +3,18 @@ import { borrar } from '../Api/borrarApi';
 import { Contexto } from '../contexto/contexto';
 
 type hola = {
-    setBorrar:Function
+    setBorrar:Function,
+    setBorrar2:Function
 }
 type estado = {
     usuario:string,
     contra:string
+}
+interface propiedades{
+    mandar:Function,
+    uno:Function,
+    dos:Function,
+    setBorrar:Function
 }
 function Confirmar() {
     const [escribir, setEsctibir]=React.useState<estado>({
@@ -26,6 +33,42 @@ function Confirmar() {
     }
     const {setBorrar}=React.useContext(Contexto) as hola;
     return (
+        <Elemento
+        mandar={mandar}
+        uno={uno}
+        dos={dos}
+        setBorrar={setBorrar}
+        />
+    )
+}
+export function Confirmar2():JSX.Element {
+    const [escribir, setEsctibir]=React.useState<estado>({
+        usuario:"",
+        contra:""
+    });
+    const {num} = React.useContext(Contexto) as {num:string}; 
+    const mandar = (e: React.FormEvent<HTMLFormElement>): void => {
+        e.preventDefault();
+        borrar(num, escribir);
+    }
+    const uno =(e:React.ChangeEvent<HTMLInputElement>)=>{
+        setEsctibir({...escribir,usuario:e.target.value});
+    }
+    const dos =(e:React.ChangeEvent<HTMLInputElement>)=>{
+        setEsctibir({...escribir,contra:e.target.value});
+    }
+    const {setBorrar2}=React.useContext(Contexto) as hola;
+    return (
+        <Elemento
+        mandar={mandar}
+        uno={uno}
+        dos={dos}
+        setBorrar={setBorrar2}
+        />
+    )
+}
+function Elemento({mandar, uno, dos, setBorrar}:propiedades){
+    return (
         <form onSubmit={(e) => mandar(e)} className="formulario2">
             <div className="fila">
                 <label htmlFor=".entradas">Usuario</label>
@@ -40,7 +83,6 @@ function Confirmar() {
                 <button className="boton" type="button" onClick={()=>setBorrar(false)}>Cancelar</button>
             </div>
         </form>
-    )
+    );
 }
-
 export { Confirmar }

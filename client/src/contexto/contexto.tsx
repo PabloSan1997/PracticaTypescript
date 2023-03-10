@@ -20,6 +20,8 @@ export function Provedor({ children }: props) {
     const { imagenes, setImagenes } = useImagenes() as miApi;
     const [buscar, setBuscar] = React.useState<string>("");
     const [borrar,setBorrar]=React.useState<boolean>(false);
+    const [borrar2, setBorrar2]=React.useState(false);
+    const [num, setNum]=React.useState<string>('');
     let hola: object[] = [];
     if (buscar === '') {
         hola = imagenes;
@@ -43,7 +45,11 @@ export function Provedor({ children }: props) {
                     setBuscar,
                     setImagenes,
                     borrar,
-                    setBorrar
+                    setBorrar,
+                    borrar2,
+                    setBorrar2,
+                    num,
+                    setNum
                 }
             }
         >
