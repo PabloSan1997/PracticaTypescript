@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+body {
+  background: rgb(237, 239, 255);
+}
+.boton-agregar {
+  position: fixed;
+  z-index: 0;
+  bottom: 80px;
+  right: 80px;
+  font-size: 3rem;
+  padding: 0 5px;
+  border-radius: 500px;
+  cursor: pointer;
+  border: none;
+  background: rgba(54, 54, 226, 0.445);
+  color: rgb(1, 1, 26);
+}
+.boton-agregar:hover {
+  background: rgba(54, 54, 226, 0.788);
+  animation-name: Mianimacion;
+  animation-iteration-count: 1;
+  animation-duration:.5s;
+}
+@keyframes Mianimacion {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+.fijo{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  z-index: 2;
+  display: flex;
+}
+.form{
+  background: rgb(3, 8, 38);
+  background: linear-gradient(
+    38deg,
+    rgba(3, 8, 38, 1) 0%,
+    rgba(7, 21, 71, 1) 28%,
+    rgba(3, 7, 61, 1) 39%,
+    rgba(3, 8, 29, 1) 56%,
+    rgba(7, 19, 59, 1) 100%
+  );
+  border-radius: 10px;
+  border: 2px solid black;
+  margin:150px auto auto auto;
+  width: 40%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.form .fila{
+  width: 90%;
+  height: 15%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.form .fila label{
+  color: white;
+  margin: auto auto auto 0.5%;
+  font-size: 1.2rem;
+}
+.form .fila .entradas{
+  background: rgb(224, 224, 248);
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  padding: 2px 5px;
+}
+.form .areabotones{
+  height: 20%;
+  margin: auto;
+  display: flex;
+  width: 100%;
+}
+form .areabotones .boton{
+  margin: auto;
+  padding: 5px 10px;
+  background: rgb(6, 6, 83);
+  border-radius: 5px;
+  border:2px outset rgb(5, 5, 71);
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+form .areabotones .boton:hover{
+  background: rgb(11, 11, 112);
+}
+form .areabotones .boton:active{
+  border:2px inset rgb(5, 5, 71);
+}

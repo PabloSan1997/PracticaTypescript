@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contexto } from '../contexto/contexto';
-
+import "../estilos/Contenedor.css";
 
 
 type imagen = {

@@ -49,18 +49,19 @@ export function Formulario({setMostrar}:props): JSX.Element {
     }
   
     return (
-        <form className="formulario" onSubmit={(e)=>subir(e)}>
+        <div className="fijo">
+            <form className="formulario form" onSubmit={(e)=>subir(e)}>
             <div className="fila">
                 <label>Titulo</label>
-                <input type="text" onChange={(e)=>titulo(e)} placeholder="Escribir..."/>
+                <input type="text" onChange={(e)=>titulo(e)} placeholder="Escribir..." className='entradas'/>
             </div>
             <div className="fila">
                 <label>Descripcion</label>
-                <input type="text" onChange={(e)=>descripcion(e)} placeholder="Escribir..."/>
+                <input type="text" onChange={(e)=>descripcion(e)} placeholder="Escribir..." className='entradas'/>
             </div>
             <div className="fila">
                 <label>Url</label>
-                <input type="text" onChange={(e)=>imgurl(e)} placeholder="Escribir..."/>
+                <input type="text" onChange={(e)=>imgurl(e)} placeholder="Escribir..." className='entradas'/>
             </div>
             <div className="areabotones">
                 <button type='submit' className='boton'>Enviar</button>
@@ -68,5 +69,6 @@ export function Formulario({setMostrar}:props): JSX.Element {
                 <button className='boton' type="button" onClick={()=>{setBorrar(true);setMostrar(false);}}>Borrar Todo</button>
             </div>
         </form>
+        </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contexto } from '../contexto/contexto';
-
+import "../estilos/Buscador.css"
 type miContexto = {
     buscar: string,
     setBuscar: Function
@@ -13,7 +13,7 @@ export function Buscador():JSX.Element {
             <input
                 type="text"
                 className='entrada'
-                placeholder='Buscar...'
+                placeholder='Escribir...'
                 onChange={e => setBuscar(e.target.value)}
             />
         </div>

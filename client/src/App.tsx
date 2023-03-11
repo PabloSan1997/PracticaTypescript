@@ -4,8 +4,8 @@ import { Confirmar, Confirmar2 } from './componentes/Confirmar';
 import { Contenedor } from './componentes/Contenedor'
 import { Formulario } from './componentes/Formulario';
 import { Header } from './componentes/Header'
-import { Contexto, Provedor } from './contexto/contexto';
-
+import { Contexto} from './contexto/contexto';
+import "./estilos/App.css"
 
 type miContexto={
   borrar:boolean,
@@ -24,7 +24,7 @@ function App():JSX.Element{
       {mostrar && <Formulario setMostrar={setMostrar}/>}
       {borrar &&  <Confirmar/>}
       {borrar2 && <Confirmar2/>}
-      <button className='boton' onClick={()=>setMostrar(!mostrar)}>+</button>
+      <button className='boton-agregar' onClick={()=>setMostrar(!mostrar)}>+</button>
     </div>
 
   )

@@ -69,7 +69,8 @@ export function Confirmar2():JSX.Element {
 }
 function Elemento({mandar, uno, dos, setBorrar}:propiedades){
     return (
-        <form onSubmit={(e) => mandar(e)} className="formulario2">
+       <div className="fijo">
+         <form onSubmit={(e) => mandar(e)} className="formulario2 form">
             <div className="fila">
                 <label htmlFor=".entradas">Usuario</label>
                 <input type="text" className="entradas" onChange={e=>uno(e)}/>
@@ -83,6 +84,7 @@ function Elemento({mandar, uno, dos, setBorrar}:propiedades){
                 <button className="boton" type="button" onClick={()=>setBorrar(false)}>Cancelar</button>
             </div>
         </form>
+       </div>
     );
 }
 export { Confirmar }
