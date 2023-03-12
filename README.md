@@ -30,9 +30,9 @@ USUARIO='{"usuario":"Pablo","contra":"micontra"}
 
 #### Get todas las imagenes
 
-```http
+`
   GET api/v1/imagenes
-```
+`
 |Datos|Tipo|
 |-----|-----|
 |id|number|
@@ -42,14 +42,14 @@ USUARIO='{"usuario":"Pablo","contra":"micontra"}
 
 #### Get una sola imagenes
 
-```http
+`
   GET api/v1/imagenes/:id
-```
+`
 ### POST imagen
 
-```http
+`
   POST api/v1/imagenes/
-```
+`
 |Datos|Tipo|
 |-----|-----|
 |titulo|string|
@@ -61,9 +61,9 @@ El id lo agrega automaticamente el programa
 
 ### PATCH imagen
 
-```http
+`
   PATCH api/v1/imagenes/:id
-```
+`
 
 |Datos|Tipo|
 |-----|-----|
@@ -73,15 +73,15 @@ El id lo agrega automaticamente el programa
 
 ### DELETE Todas las imagenes
 
-```http
+`
   DELETE  api/v1/imagenes/borrarTodo
-```
+`
 
 ### DELETE una sola imagen
 
-```http
+`
   DELETE  api/v1/imagenes/:id
-```
+`
 
 ## Captura
 [![Captura](https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTTXxNAqm30msM6lnQ9IWKdPPFl7EvkAy2lffXlYdsruuhJzTtg3MeClYgreN479KkYEao9PZHC0R6xq4ljMcabsAM2uA=w926-h643 "Captura")](https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTTXxNAqm30msM6lnQ9IWKdPPFl7EvkAy2lffXlYdsruuhJzTtg3MeClYgreN479KkYEao9PZHC0R6xq4ljMcabsAM2uA=w926-h643 "Captura")
