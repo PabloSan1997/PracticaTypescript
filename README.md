@@ -20,11 +20,21 @@ En ambas carpetas tienes que aplicar `npm install` por separado
 - Desde otra consola en la carpeta client digite el siguiente codigo para activar la pagina en el modo desarrollador `npm run dev`  y para generar los archivos estaticos de la pagina digite el siguiente codigo `npm run build` 
 
 - Una vez instalada que ambos servidores este funcionande desde el fronend puedes ver las imagenes guardadas y mandar las tuyas propias
-- Para borrar las imagenes necesitas crear un archivo `.env` en la carpeta backend en donde pondras los datos del usuario de la siguiente forma
+
+
+## Variables ambientales
+
+Para que tengas todas las acciones activadas en la carpeta backend es importante generar un archivo `.env` para poder tener un usuario registrado y poder borrar elementos
 
 ```
 USUARIO='{"usuario":"Pablo","contra":"micontra"}
 ```
+
+## Tech Stack
+
+**Backend**  NodeJS, Express, @Hapi/boom, joi, Javascipt
+
+**Client:** React, Typescript, Vite, Javascript, Axios, NodeJS
 
 ## API Referencia
 
