@@ -32,7 +32,7 @@ USUARIO='{"usuario":"Pablo","contra":"micontra"}
 
 ## Tech Stack
 
-**Backend**  NodeJS, Express, @Hapi/boom, joi, Javascipt
+**Backend:**  NodeJS, Express, @Hapi/boom, joi, Javascipt
 
 **Client:** React, Typescript, Vite, Javascript, Axios, NodeJS
 
